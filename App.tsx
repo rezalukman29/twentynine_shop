@@ -9,6 +9,7 @@ import React from 'react';
 
 import {QueryClient, QueryClientProvider} from 'react-query';
 import Routes from './src/navigation/Routes';
+import {AppContext} from './src/context/AppContext';
 
 function App(): React.JSX.Element {
   const queryClient = new QueryClient({
@@ -20,7 +21,9 @@ function App(): React.JSX.Element {
   });
   return (
     <QueryClientProvider client={queryClient}>
-      <Routes />
+      <AppContext>
+        <Routes />
+      </AppContext>
     </QueryClientProvider>
   );
 }
