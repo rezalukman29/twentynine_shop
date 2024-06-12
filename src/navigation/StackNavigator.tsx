@@ -17,11 +17,6 @@ function AppScreenStack() {
       <DjStack.Screen
         name={RouteName.ProductDetail}
         component={ProductDetail}
-        options={{
-          presentation: 'fullScreenModal',
-          animationTypeForReplace: 'push',
-          animation: 'slide_from_right',
-        }}
       />
     </DjStack.Navigator>
   );
